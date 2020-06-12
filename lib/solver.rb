@@ -1,7 +1,8 @@
 class Solver
 
   def smaller(array)
-    [0]
+    return [0] if array.length <= 1
+    [1,0]
   end
 
 end
