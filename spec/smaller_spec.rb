@@ -26,6 +26,11 @@ describe Solver do
       expect(solver.smaller([1,2,1])).to eq([0,1,0])
     end
 
+    it('should return the correct array for size 5') do
+      expect(solver.smaller([5,4,3,2,1])).to eq([4,3,2,1,0])
+      expect(solver.smaller([1,1,-1,0,0])).to eq([3,3,0,0,0])
+    end
+
   end
 
 end
