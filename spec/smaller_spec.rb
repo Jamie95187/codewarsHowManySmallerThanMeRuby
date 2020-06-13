@@ -13,6 +13,7 @@ describe Solver do
 
     it('should return correct array for input size 2') do
       expect(solver.smaller([1,0])).to eq([1,0])
+      expect(solver.smaller([2,2])).to eq([0,0])
       expect(solver.smaller([0,1])).to eq([0,0])
       expect(solver.smaller([0,0])).to eq([0,0])
     end
