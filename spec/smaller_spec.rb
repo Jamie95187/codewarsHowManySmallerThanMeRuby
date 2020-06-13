@@ -26,6 +26,10 @@ describe Solver do
       expect(solver.smaller([1,1,0])).to eq([1,1,0])
     end
 
+    it('should return [0,0,0] when input is [0,1,2]') do
+      expect(solver.smaller([0,1,2])).to eq([0,0,0])
+    end
+
   end
 
 end
