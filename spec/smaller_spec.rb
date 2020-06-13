@@ -31,6 +31,9 @@ describe Solver do
       expect(solver.smaller([1,1,-1,0,0])).to eq([3,3,0,0,0])
     end
 
+    it('should return the correct output') do
+      expect(solver.smaller([5, 4, 7, 9, 2, 4, 4, 5, 6])).to eq([4, 1, 5, 5, 0, 0, 0, 0, 0])
+    end
   end
 
 end
