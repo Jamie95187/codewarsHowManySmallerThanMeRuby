@@ -1,9 +1,11 @@
 require 'solver'
+require 'solverTwo'
 
 describe Solver do
 
   describe '#smaller' do
 
+    solver2 = SolverTwo.new
     solver = Solver.new
 
     it('should return [0] when input is one element array') do
@@ -34,6 +36,12 @@ describe Solver do
     it('should return the correct output') do
       expect(solver.smaller([5, 4, 7, 9, 2, 4, 4, 5, 6])).to eq([4, 1, 5, 5, 0, 0, 0, 0, 0])
     end
+
+    it('should return the correct array for size 5') do
+      expect(solver2.smaller([5,4,3,2,1])).to eq([4,3,2,1,0])
+      expect(solver2.smaller([1,1,-1,0,0])).to eq([3,3,0,0,0])
+    end
+
   end
 
 end
