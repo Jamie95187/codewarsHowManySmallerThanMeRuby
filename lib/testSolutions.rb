@@ -13,10 +13,10 @@ class Tester
 
   def testSolutionTwo(array)
     solver_2 = SolverTwo.new
-    t1 = Time.now
-    solver_2.smaller(array)
-    t2 = Time.now
-    puts "It took Solver Two #{t2-t1}"
+    t3 = Time.now
+    solver_2.smallerTwo(array)
+    t4 = Time.now
+    puts "It took Solver Two #{t3-t4}"
   end
 
 end

@@ -1,6 +1,6 @@
 class SolverTwo
 
-  def smaller(array)
+  def smallerTwo(array)
     answer = []
     i = 0
     while i < array.length do
