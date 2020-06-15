@@ -3,36 +3,30 @@ class Solver
   def smaller(array)
     return [0] if array.length == 1
     count = []
-    save = {}
+    answ = [0]
     k = array.length - 1
-    k =- 1
-    save[array[k]] = 0
-    count << save[array[k]]
+    count << [array[k],0]
+    k -= 1
     while k >= 0 do
-      count.each { | | }
-    end
-    arrayMax = array
-    arrayMax[array.length] = array.last
-    currentMax = array.last
-    i = array.length - 2
-    while i >= 0 do
-      currentMax = array[i] if array[i] > currentMax
-    end
-    answer = []
-    i = 0
-    while i < array.length do
-      count = 0
-      j = i
-      while j < array.length do
-        if array[i] > array[j]
-          count += 1
+      added = false
+      tracker = 0
+      count.each do |currentSave|
+        if currentSave.first == array[k]
+          count.unshift([array[k],currentSave[1]+tracker])
+          answ.unshift(currentSave[1]+tracker)
+          added = true
+          break
+        elsif array[k] > currentSave.first
+          tracker += 1
         end
-        j += 1
       end
-      answer[i] = count
-      i += 1
+      if added == false
+        answ.unshift(tracker)
+        count.unshift([array[k],tracker])
+      end
+        k -= 1
     end
-    answer
+    answ
   end
 
 end
