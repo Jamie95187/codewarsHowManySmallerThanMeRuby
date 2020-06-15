@@ -38,8 +38,8 @@ describe Solver do
     end
 
     it('should return the correct array for size 5') do
-      expect(solver2.smaller([5,4,3,2,1])).to eq([4,3,2,1,0])
-      expect(solver2.smaller([1,1,-1,0,0])).to eq([3,3,0,0,0])
+      expect(solver2.smallerTwo([5,4,3,2,1])).to eq([4,3,2,1,0])
+      expect(solver2.smallerTwo([1,1,-1,0,0])).to eq([3,3,0,0,0])
     end
 
   end
